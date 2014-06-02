@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-
+	before_action :require_login, only:[:new, :create, :edit, :destroy, :update]
 	def index
 		@articles = Article.all
 	end
@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def article_params
-		params.require(:article).permit(:title, :body, :tag_list)
+		params.require(:article).permit(:title, :body, :tag_list, :image)
 	end
 
 	def destroy 

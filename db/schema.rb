@@ -11,18 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140601165459) do
-=======
-ActiveRecord::Schema.define(version: 20140601155232) do
->>>>>>> e2e9743ef65579ab0c8d03cd969c078010e1df99
+ActiveRecord::Schema.define(version: 20140602043618) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "imaage_updated_at"
   end
+
+  create_table "authors", force: true do |t|
+    t.string   "username",         null: false
+    t.string   "email",            null: false
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "authors", ["email"], name: "index_authors_on_email", unique: true
 
   create_table "comments", force: true do |t|
     t.string   "author_name"
@@ -32,7 +43,6 @@ ActiveRecord::Schema.define(version: 20140601155232) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "article_id"
@@ -49,6 +59,4 @@ ActiveRecord::Schema.define(version: 20140601155232) do
     t.datetime "updated_at"
   end
 
-=======
->>>>>>> e2e9743ef65579ab0c8d03cd969c078010e1df99
 end
