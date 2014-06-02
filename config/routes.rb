@@ -1,19 +1,12 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
+
   root to: "articles#index"
   resources :articles do
     resources :comments
   end
   resources :tags
 
-=======
-  resources :articles
-
-  resources :articles do
-    resources :comments
-  end
->>>>>>> e2e9743ef65579ab0c8d03cd969c078010e1df99
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
 	has_many :comments
-<<<<<<< HEAD
+
 	has_many :taggings
 	has_many :tags, through: :taggings
 
@@ -15,6 +15,4 @@ class Article < ActiveRecord::Base
 	  new_or_found_tags = tag_names.collect { |name| Tag.find_or_create_by(name: name) }
 	  self.tags = new_or_found_tags
 	end
-=======
->>>>>>> e2e9743ef65579ab0c8d03cd969c078010e1df99
 end
