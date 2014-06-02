@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140601165459) do
+=======
+ActiveRecord::Schema.define(version: 20140601155232) do
+>>>>>>> e2e9743ef65579ab0c8d03cd969c078010e1df99
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -28,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140601165459) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "article_id"
@@ -44,4 +49,6 @@ ActiveRecord::Schema.define(version: 20140601165459) do
     t.datetime "updated_at"
   end
 
+=======
+>>>>>>> e2e9743ef65579ab0c8d03cd969c078010e1df99
 end
